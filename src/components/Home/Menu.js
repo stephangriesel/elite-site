@@ -20,7 +20,7 @@ class Menu extends Component {
         console.log(props.items);
         this.state = {
             items: props.items.edges,
-            coffeeItems: props.items.edges,
+            listItems: props.items.edges,
             categories: getCategories(props.items.edges)
         }
     }
@@ -28,13 +28,13 @@ class Menu extends Component {
         let tempItems = [...this.state.items];
         if (category === "all") {
             this.setState(() => {
-                return { coffeeItems: tempItems }
+                return { listItems: tempItems }
             })
         }
         else {
             let items = tempItems.filter(({ node }) => node.category === category);
             this.setState(() => {
-                return { coffeeItems: items };
+                return { listItems: items };
             })
         }
     }
@@ -53,14 +53,14 @@ class Menu extends Component {
                                 <div className="row mb-5">
                                     <div className="col-10 mx-auto text-center">
                                         {this.state.categories.map((category, index) => {
-                                            return (<button type="button" key={index} className="btn btn-yellow text-capitalize m-3" onClick={() => { this.handleItems(category) }}>{category}</button>)
+                                            return (<button type="button" key={index} className="btn btn-blue text-capitalize m-3" onClick={() => { this.handleItems(category) }}>{category}</button>)
                                         })}
                                     </div>
                                 </div>
                                 {/* Items */}
                                 <div className="row">
-                                    {/* coffee items array in state, loop through array */}
-                                    {this.state.coffeeItems.map(({ node }) => {
+                                    {/* list items array in state, loop through array */}
+                                    {this.state.listItems.map(({ node }) => {
                                         return (
 
                                             <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">

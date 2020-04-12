@@ -55,11 +55,11 @@ export default class Navbar extends Component {
                                 );
                             })
                         }
-                        <li className="nav-item ml-sm-5">
+                        {/* <li className="nav-item ml-sm-5">
                             <button className="snipcart-checkout">Cart</button>
-                            {/* <FaCartArrowDown className="cart-icon" /> */}
-                            {/* <span>test</span> */}
-                        </li>
+                            <FaCartArrowDown className="cart-icon" />
+                            <span>test</span>
+                        </li> */}
                     </ul>
                 </div>
             </nav>

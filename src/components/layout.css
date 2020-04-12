@@ -4,6 +4,8 @@
   --mainGrey: #c7c7c7;
   --mainWhite: #ebebeb;
   --mainDark: rgb(22, 22, 22);
+  --mainGreen: rgb(30, 112, 41);
+  --mainBlue: rgb(62, 123, 173);
 }
 
 body {
@@ -18,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(rgba(252, 180, 25, 0.8), rgba(252, 180, 25, 0.8)); */
+  background: linear-gradient(rgba(30, 112, 41, 0.5), rgba(30, 112, 41, 0.5));
   background-position: center;
   background-size: cover;
 }
@@ -42,10 +44,19 @@ body {
   background: var(--mainYellow);
   color: var(--mainBrown);
 }
+.btn-blue {
+  color: var(--mainBlue);
+  border-color: var(--mainBlue);
+}
+
+.btn-blue:hover {
+  background: var(--mainBlue);
+  color: var(--mainDark);
+}
 
 .footer {
-  background: var(--mainBrown);
-  color: var(--mainYellow);
+  background: var(--mainBlue);
+  color: var(--mainDark);
 }
 
 .menu,

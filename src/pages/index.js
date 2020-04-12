@@ -16,12 +16,12 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="Koffie Kaskenades"
+      title="Elite Properties"
       styleClass="default-background"
     />
     <Info />
     <Menu items={data.menu} />
-    <Products />
+    {/* <Products /> */}
     <Contact />
   </Layout >
 );
@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => (
 export const query = graphql`
 {
   img:file(relativePath:{
-    eq:"default-bg.jpg"
+    eq:"default-test.jpg"
   }){
     childImageSharp{
       fluid {
@@ -37,12 +37,12 @@ export const query = graphql`
       }
     }
   }
-  menu:allContentfulCoffeeItem{
+  menu:allContentfulListItem{
     edges{
       node{
         id
         title
-        price
+        finalprice
         category
         image {
           fixed(width:50,height:50){
